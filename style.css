@@ -1,0 +1,1389 @@
+@media only screen and (max-height: 750px) {
+    body .typewriterPaper img {
+        height: 25vw;
+    }
+
+    body .typewriterPaper {
+        top: -5%;
+    }
+
+    body .typewriterText {
+        width: 15vw;
+    }
+
+    body .lightupText {
+        font-size: 120%;
+    }
+
+    body .lightupLetters {
+        height: 50%;
+    }
+
+    body .lightContainer {
+        height: 2.75vw;
+        width: 2.75vw;
+    }
+    
+    body .typewriterKeysText {
+        font-size: 100%;
+    }
+
+    body {
+        font-size: 90%;
+    }
+
+}
+    
+body {
+    background-color:#404c5a;
+    margin-top: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  
+}
+
+.topHalf {
+    position: absolute;
+    top: 0%;
+    height: 32vw;
+    width: 105%;
+    background-image: linear-gradient(#343a46, #404c5a);
+    margin-left: -2vw;
+}
+
+.bottomHalf {
+    position: absolute;
+    top: 40%;
+    height: 25vw;
+    width: 105%;
+    background-image: linear-gradient(#343a46, #404c5a);
+    margin-left: -2vw;
+}
+
+
+
+
+form {
+    position: relative;
+    top: 2%;
+    left: 4.5%;
+  }
+
+  select::-webkit-scrollbar {
+    width: 0px; 
+    background-color: transparent;
+}
+
+    input, option, textarea {
+    font-size: 1.7vw;
+    font-weight: 500;
+    color: #b9a133;
+    background: black;
+    text-align: center;
+  }
+
+   select {
+      width: 2vw;
+      height: 8vw;
+  }
+
+  .letterBox, .letterBox2, .letterBox3, .letterBox4, .letterBox5, .letterBox6, .letterBox7, .letterBox8, .letterBox9, .letterBox10   {
+      display: inline;
+      
+  }
+
+  .letterBox10 option, input  {
+      background: #a83017;
+  }
+
+  .letterBox10 {
+      margin-left: 4px;
+  }
+
+  option:checked  {
+   position: absolute;
+   top: 104%;
+   width: 1.6vw;
+   border: 0.02px solid white;
+ }
+
+ :checked {
+    font-size: 1.7vw;
+    font-weight: 500;
+    color: #b9a133;
+    background: black;
+    text-align: center;
+  }
+
+
+.cryptexContainer {
+    height: 11vw;
+    width: 25vw;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border: 2px solid black;     
+    border-radius: 10px;
+    box-shadow: inset -0.5px 0px 60px 15px black, -0.5px 0px 3px 2px black, 5px -4px 10px -5px white;
+    
+}
+
+.sticker4 {
+    background-color: #2b2e35;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 8vw;
+    height: 3vw;
+    border: 2px solid #e5e4e9;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px 1px black, 0px 0px 1px 1px black;
+}
+
+.sticker4Text {
+    color: #e5e4e9;
+    font-size: 70%;
+    text-align: center;
+    position: relative;
+    top: -40%;
+}
+
+.stickerBolt7 {
+    position: relative;
+    top: 37%;
+    left: -3%;
+    background-color: #e5e4e9;
+    height:0.75vw;
+    width: 0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px 1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+
+}
+
+.stickerBolt8 {
+    position: relative;
+    top: -115%;
+    left: 93%;
+    background-color: #e5e4e9;
+    height:0.75vw;
+    width: 0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px 1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+    
+}
+
+.typewriterPaper {
+    position: absolute;
+    top: -10%;
+    left: 40%;
+    height: 30vw;
+    width: auto;
+    text-align: center;
+}
+
+.typewriterText {
+    position: absolute;
+    top: 10%;
+    left: 44%;
+    height: 13vw;
+    width: 19vw;
+    z-index: 2;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Lekton', sans-serif;
+    font-family: 'Special Elite', cursive;
+    font-size: 3vw;
+    border: none;
+    font-size: 160%;
+    color: black;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    }
+
+
+
+
+.typewriterPaper img {
+    height: 30vw;
+    width: auto;
+    z-index: 1;
+}
+
+.yellowSticker {
+    position: absolute;
+    top: 5%;
+    left: 72.5%;
+    height: 5vw;
+    width: 23vw;
+    background-color: #b9a133;
+    border-radius: 10px;
+    box-shadow: inset 1px -1px 5px 1px white, inset 0px 3px 15px 0.5px black;
+}
+
+.yellowStickerText {
+    text-align: center;
+    position: relative;
+    top: -40%;
+    font-size: 110%;
+}
+
+.yellowStickerBorder {
+    border: 2px solid black;
+    margin: .2vw;
+    vertical-align: center;
+    height: 4.2vw;
+    width: 22.3vw;
+    border-radius: 10px;
+}
+
+.yellowStickerBolt {
+    position: relative;
+    top: 40%;
+    left: 2%;
+    background-color: #e5e4e9;
+    height:0.75vw;
+    width: 0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px 1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+
+}
+
+.yellowStickerBolt2 {
+    position: relative;
+    top: -122%;
+    left: 95%;
+    background-color: #e5e4e9;
+    height:0.75vw;
+    width: 0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px 1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+
+}
+
+.bolt1 {
+    position: absolute;
+    top: 33%;
+    left: 12%;
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 40px;
+    background-color: #1d2228;
+    box-shadow: inset 0.5px -1px 3px 0.5px white, -2px 2px 15px 1px black;
+}
+
+.bolt2 {
+    position: absolute;
+    top: 33%;
+    left: 85%;
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 40px;
+    background-color: #1d2228;
+    ;
+    box-shadow: inset 0.5px -1px 3px 0.5px white, -2px 2px 15px 1px black;
+}
+
+.boltHead1 {
+    position: relative;
+    top: 6%;
+    left: 45%;
+    transform: rotate(-40deg);
+    height: 2vw;
+    width: 0.2vw;
+    background-color: black;
+    box-shadow: 1px 1px 3px 0.1px white;
+
+}
+
+.boltHead2 {
+    position: relative;
+    top: 10%;
+    left: 45%;
+    transform: rotate(-60deg);
+    height: 2vw;
+    width: 0.2vw;
+    background-color: black;
+    box-shadow: 1px 1px 3px 0.1px white;
+
+}
+
+.counterContainer {
+    position: absolute;
+    top: 23%;
+    left: 73%;
+    width: 10vw;
+    height: 4vw;
+    background-color: #222417;
+    box-shadow: -0.5px 0px 3px 2px black, 5px -4px 10px -5px white, inset -3px 5px 20px 4px black;
+}
+
+.counter {
+    position: relative;
+    top: 40%;
+    left: 12%;
+    display: inline;
+    margin: 0.4vw;
+    font-size: 150%;
+    font-family: 'Inconsolata', monospace;
+    color: #edecd0;
+}
+
+.counterLever {
+    background-color: black;
+    position: absolute;
+    top: 22%;
+    left: 88%;
+    height: 5vw;
+    width: 0.5vw; 
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+
+}
+
+.counterLeverHandle {
+    position: relative;
+    top: 30%;
+    height: 1.75vw;
+    width: 0.75vw;
+    background-color: #282f39;
+    box-shadow: inset -1px 2px 8px -3px white, inset 1px -2px 1px 0px black;
+    border-radius: 2px;
+}
+
+.sticker3 {
+    background-color: #2b2e35;
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    height: 7vw;
+    width: 2vw;
+    text-align: center;
+    border: 2px solid #e5e4e9;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 10px 1px black, 0px 0px 1px 1px black;
+}
+
+.stickerBolt5 {
+    position: relative;
+    top: -5%;
+    left: 30%;
+    background-color: #e5e4e9;
+    height:0.75vw;
+    width: 0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px 1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+
+}
+
+.stickerBolt6 {
+    position: relative;
+    top: 5%;
+    left: 30%;
+    background-color: #e5e4e9;
+    height:0.75vw;
+    width: 0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px 1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+}
+
+.arrowArm{
+    Position: relative;
+    top: 7%;
+    left: 45.5%;
+    height: 4vw;
+    width: 0.2vw;
+    background-color: #e5e4e9;
+    margin: 0;    
+}
+
+.arrowHead {
+    
+    border: solid #e5e4e9;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+    position: relative;
+    top: -7%;
+    left: 0%
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+
+
+
+
+
+  
+
+/* Bottom half of the NEMA machine */
+
+.nemaDivision {
+    height: 0.2vw;
+    position: absolute;
+    top: 40%;
+    width: 99%;
+    background-color: grey;
+}
+
+.keysBackground {
+    background-image: linear-gradient(#0c0f14, #21252e);
+    height: 17vw;
+    width: 70vw;
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid black;     
+    border-radius: 20px;   
+    box-shadow: -1px 3px 5px 0.5px white, 1px 3px 5px 0.5px white, inset 4px 15px 15px 10px black, inset -5px 15px 15px 10px black;
+}
+
+.spaceBar {
+    position: relative;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2vw;
+    width: 60vw;
+    background-color: #414954;
+    border-radius: 20px;
+    box-shadow: inset 4px -1px 6px 3px black, inset 0px 1px 5px 2px white;
+
+}
+
+.dials {
+    position: absolute;
+    top: 69%;
+    left: 88%;
+}
+
+.dialsBackground {
+    background-color: #0f1219;
+    height: 10vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 3px solid black;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white, inset 0px 0px 15px 1px black;
+}
+
+.dial1 {
+    position: relative;
+    top: 17%;
+    background-color: black;
+    height: 2.7vw;
+    width: 2.7vw;
+    border: 2px solid #404c5a;
+    border-radius: 50px;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.dial2 {
+    position: relative;
+    top: 25%;
+    background-color: black;
+    height: 2.7vw;
+    width: 2.7vw;
+    border: 2px solid #404c5a;
+    border-radius: 50px;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.bolt {
+    background-color: #171d29;
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    height: 2vw;
+    width: 2vw;
+    border: 5px solid black;
+    border-radius: 40px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white, inset 0px 0px 3px 1px black
+}
+
+.boltReflection {
+    background-color: #fbffff;
+    position: relative;
+    height: .5vw;
+    width: .5vw;
+    border: 2px solid #404c5a; 
+    border-radius: 40px;
+    top: 15%;
+    left: 10%;
+    box-shadow: inset 0.5px -1px 3px 0.5px black;
+}
+
+.sticker {
+    background-color: #2b2e35;
+    position: absolute;
+    top: 43%;
+    left: 84%;
+    height: 8vw;
+    width: 3vw;
+    text-align: center;
+    border: 2px solid #e5e4e9;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 15px 1px black, 0px 0px 1px 1px black;
+}
+
+.sticker2 {
+    background-color: #2b2e35;
+    position: absolute;
+    top: 89%;
+    left: 88.5%;
+    height: 3.5vw;
+    width: 2vw;
+    text-align: center;
+    border: 2px solid #e5e4e9;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 7.5px 1px black, 0px 0px 1px 1px black;
+}
+
+.stickerBolt {
+    position: relative;
+    top: -5%;
+    left: 37%;
+    background-color: #e5e4e9;
+    height:0.75vw;
+    width: 0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px 1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+}
+
+.stickerBolt2 {
+    position: relative;
+    top: 13%;
+    left: 37%;
+    background-color: #e5e4e9;
+    height: 0.75vw;
+    width: 0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px -1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+}
+
+.stickerBolt3 {
+    position: relative;
+    top: -5%;
+    left: 32%;
+    background-color: #e5e4e9;
+    height:0.75vw;
+    width:0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px 1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+}
+
+.stickerBolt4 {
+    position: relative;
+    top: -5%;
+    left: 32%;
+    background-color: #e5e4e9;
+    height:0.75vw;
+    width:0.75vw;
+    border-radius: 40px;
+    box-shadow: -1px -1px 5px 0.5px black, inset 0.5px -1px 3px 0.5px black;
+}
+
+.label {
+    color: #e5e4e9;
+    font-size: 1vw;
+    margin: .5vw;
+}
+
+.slider {
+    background-color: black;
+    position: absolute;
+    top: 41.5%;
+    left: 89%;
+    height: 11vw;
+    width: 0.5vw; 
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.sliderLever {
+    position: relative;
+    top: 30%;
+    height: 1.75vw;
+    width: 0.75vw;
+    background-color: #282f39;
+    box-shadow: inset -1px 2px 8px -3px white, inset 1px -2px 1px 0px black;
+    border-radius: 2px;
+}
+
+
+
+
+
+/* Light up text */
+
+.lightupLetters {
+    position: absolute;
+    top: 43%;
+    left: 20%;
+}
+
+.lightupLetters2 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+.lightupLetters3 {
+    position: absolute;
+    top: 57%;
+    left: 22%;
+}
+
+.lightupText {
+    position: relative;
+    font-size: 160%;
+    color: #3c3918;
+    top: -36%;
+    left: 26%;
+}
+
+
+
+
+/* QWERTY Row */
+
+.qContainer {
+    display: inline-block;
+    position: relative;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.wContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.eContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.rContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.tContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.yContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.uContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.iContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.oContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.pContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+
+
+
+
+/* Light up text Row 2 */
+
+/*.shadowed {
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}*/
+
+.aContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.sContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.dContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.fContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.gContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.hContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.jContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.kContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.lContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+
+
+/* Light up text Row 3 */
+
+.zContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.xContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.cContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.vContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.bContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.bContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.nContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.mContainer {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+
+.blankContainer1 {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+.blankContainer2 {
+    margin-left: 2.5vw;
+    display: inline-block;
+    background-color: #181a0c;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    box-shadow: -0.5px 0px 3px 2px black, 4px -3px 8px -5px white;
+}
+
+
+
+
+/* Typewriter */
+
+.typewriterLetters {
+    position: absolute;
+    top: 68%;
+    left: 18.8%;
+    
+}
+
+.typewriterKeysText {
+    position: relative;
+    font-size: 120%;
+    color: white;
+    top: -13%;
+    left: 34%;
+}
+
+#wKeyText {
+    left: 28%;
+    top: -9%;
+}
+
+#iKeyText {
+    left:43%;
+}
+
+#mKeyText {
+    left:30%;
+}
+
+#MLight {
+    left:19%;
+}
+
+.typewriterLetters2 {
+    position: absolute;
+    top: 75%;
+    left: 18.8%;
+}
+
+.typewriterLetters3 {
+    position: absolute;
+    top: 82%;
+    left: 23.7%;
+}
+
+
+
+
+
+/* Qwerty - Typewriter */
+
+.qContainerTypewriter {
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.wContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.eContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.rContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.tContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.yContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.uContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.iContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.oContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.pContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.wrContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.wrContainerTypewriter .typewriterKeysText {
+    left: 10%;
+}
+
+
+
+/* Typewritey keys row 2 */
+
+.aContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.sContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.dContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.fContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.gContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.hContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.jContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.kContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.lContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.zlContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.zlContainerTypewriter .typewriterKeysText {
+    left: 22%;
+}
+
+
+/* Typewriter row 3*/
+
+.zContainerTypewriter {
+    display: inline-block;
+    position: relative;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.xContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.cContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.vContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.bContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.nContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.mContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.blankContainerTypewriter1 {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.blankContainerTypewriter2 {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+    box-shadow: -0.5px 2px 2px grey;
+}
+
+.blankContainerTypewriter1 .typewriterKeysText {
+    color: black;
+}
+
+.blankContainerTypewriter2 .typewriterKeysText {
+    color: black;
+}
+
+
+
+.buContainerTypewriter {
+    margin-left: 2.3vw;
+    display: inline-block;
+    background-color: black;
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50px;
+    border: 2px solid #404c5a;
+}
+
+.buContainerTypewriter .typewriterKeysText {
+    left: 20%;
+}
+
