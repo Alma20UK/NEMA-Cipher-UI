@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lekton&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <script defer src="Scripts/script.js"></script>
+</head>
+
+<body>
+
+    <!-- Top and bottom half of the machine. Used so I can apply 2 separate gradients in CSS. -->
+    <div class="topHalf"></div>
+
+    <div class="bottomHalf"></div>
+
+
+
+    <!-- Help page -->
+    <div class="helpPage" id="helpPage">
+        <div class="helpBackground"></div>
+        <div class="closeHelp" id="closeHelp">
+            <img src="media/closeButton.png">
+        </div>
+        <div class="helpPaper">
+
+            <div class="helpText">This is a digital replica of a 1940s <a
+                    href="https://www.cryptomuseum.com/crypto/nema/">NEMA</a> machine. The NEMA machine was a 10-wheel
+                rotor machine designed by the Swiss army during the Second World War as a replacement for their Enigma
+                machines.<br><br>
+                It is designed to encrypt messages using a specified configuration and key. The Swiss army would have
+                predetermined configurations and keys for given days. Ciphers (encrypted messages) sent to their allies
+                could then be decrypted by typing them into another machine with the same configuration and key, leaving
+                the enemy with just a garbled cipher. Have a go yourself!<br><br>
+                The configuration of the machine is made up by which rotors are plugged in and in which order. In this
+                replica this has been set to <em>"15-C / 12-A / 14-D / 13-B"</em> (the rotors at either end are always
+                the same, leaving 8 to be configured).<br><br>
+                The key is the string of letters visible at the bottom of the rotors (determining their position). Have
+                a go at setting your key, write it down but remember, don&#x27t let the enemy see it!<br><br>
+                Once your key has been set, type in your message using your physical keyboard. Your cipher will appear
+                on the notepad up top.<br><br>
+                Once finished, take a note of your cipher, then reset the counter back to 0 on the right. Set your key
+                again, then type in the cipher. Your original message will be revealed on the notepad.<br><br>
+                This app was written for educational purposes by Alma, sponsored by <a
+                    href="https://www.rapid7.com">Rapid7</a>. It&#x27s best used on non-mobile devices.
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- 
+    The Cryptex container contains all ten of the 'cryptex wheels'.
+    There are 4 inputs above a select input which are used to create one cryptex wheel.
+    This is repeated 10 times for each wheel.
+    In furute iterations I would look to make this using JavaScript but at the time of creation did not have the capability to build that.
+    -->
+    <div class="cryptexContainer">
+
+        <form action="#" name="cryptexForm" id="cryptexForm">
+
+            <div class="letterBox">
+                <div class="wheel1">
+                    <div class="cryptexBox" id="wheel1Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel1Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel1Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel1Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel1" name="letters" size="2" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R" selected>R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+
+            </div>
+
+            <div class="letterBox2">
+                <div class="wheel2">
+                    <div class="cryptexBox" id="wheel2Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel2Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel2Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel2Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel2" name="letters" size="2" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W" selected>W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+
+            <div class="letterBox3">
+                <div class="wheel3">
+                    <div class="cryptexBox" id="wheel3Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel3Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel3Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel3Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel3" name="letters" size="2" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G" selected>G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+
+            <div class="letterBox4">
+                <div class="wheel4">
+                    <div class="cryptexBox" id="wheel4Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel4Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel4Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel4Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel4" name="letters" size="2" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K" selected>K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+
+            <div class="letterBox5">
+                <div class="wheel5">
+                    <div class="cryptexBox" id="wheel5Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel5Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel5Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel5Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel5" name="letters" size="2" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X" selected>X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+
+            <div class="letterBox6">
+                <div class="wheel6">
+                    <div class="cryptexBox" id="wheel6Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel6Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel6Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel6Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel6" name="letters" size="2" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C" selected>C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+
+            <div class="letterBox7">
+                <div class="wheel7">
+                    <div class="cryptexBox" id="wheel7Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel7Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel7Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel7Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel7" name="letters" size="2" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B" selected="true">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+
+            <div class="letterBox8">
+                <div class="wheel8">
+                    <div class="cryptexBox" id="wheel8Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel8Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel8Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel8Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel8" name="letters" size="2" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E" selected>E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+
+            <div class="letterBox9">
+                <div class="wheel9">
+                    <div class="cryptexBox" id="wheel9Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel9Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel9Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBox" id="wheel9Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel9" name="letters" size="2" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J" selected>J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+
+            <div class="letterBox10">
+                <div class="wheel10">
+                    <div class="cryptexBoxRed" id="wheel10Key4">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBoxRed" id="wheel10Key3">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBoxRed" id="wheel10Key2">A</div>
+                    <div class="inbetweenCryptex"></div>
+                    <div class="cryptexBoxRed" id="wheel10Key1">A</div>
+                    <div class="inbetweenCryptex"></div>
+                </div>
+                <select id="cryptexWheel10" name="letters" size="2" onmouseover="tooltip1()"
+                    onmouseout="hideTooltip1()">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T" selected>T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+                </select>
+            </div>
+    </div>
+
+
+
+
+    <!-- Stickers, bolts, dials and levers-->
+
+    <!-- This tooltip is accessible when hovering over the select input on the red 'cryptex lock' -->
+    <div class="tooltip" id="tooltip1">
+        <div>Select your 'key' by clicking the input highlighted at the bottom of each rotor and typing your chosen
+            letter.<br><br>Once your key is selected, push the red lever down to begin typing.</div>
+    </div>
+
+    <!-- Red cryptex lock used to create a true or false boolean -->
+    <div class="cryptexLock">
+        <div class="lockLever" id="lockLever" onmouseover="tooltip1()" onmouseout="hideTooltip1()">
+            <div class="leverHighlight"></div>
+        </div>
+
+    </div>
+
+    <!-- Question mark button with it's functionality written in JS that is able to bring up a help page -->
+    <div class="questionMark" id="questionMark">
+        <img src="media/questionMark.png">
+    </div>
+
+    <!-- Sticker located to the right of lights dashboard -->
+    <div class="sticker">
+        <div class="stickerBolt"></div>
+        <h3 class="label">Batt</h3>
+        <h3 class="label">Trafo</h3>
+        <h3 class="label">Accu</h3>
+        <div class="stickerBolt2"></div>
+    </div>
+
+    <!-- Lever located to the right of the lights dashboard. It has no functionality. -->
+    <div class="slider">
+        <div class="sliderLever"></div>
+    </div>
+
+    <!-- Voltage sticker loacted to the right of the typewriter keypad -->
+    <div class="voltSticker">
+        <div class="voltBolt1"></div>
+        <h3 class="voltText">4V</h3>
+        <div class="voltBolt2"></div>
+    </div>
+
+    <!-- Sticker located next to the 'counter lever' which is used to reset the anaologue counter -->
+    <div class="sticker3">
+        <div class="stickerBolt5"></div>
+        <div class="arrowArm"></div>
+        <div class="arrowHead down"></div>
+        <div class="stickerBolt6"></div>
+    </div>
+
+    <!-- Sticker located below the cryptex container -->
+    <div class="zellwegenSticker">
+        <div class="zellwegenBolt1"></div>
+        <h4 class="zellwegenText">Zellwegen A.-B. <br> Usten</h4>
+        <div class="zellwegenBolt2"></div>
+    </div>
+
+    <!-- Typewriter notepad that the encrypted text is written on -->
+    <div class="typewriterPaper">
+        <img src="Media/paper.png">
+        <textarea type="text" maxlength="100" class="typewriterText" id="typewriterText" disabled></textarea>
+    </div>
+
+    <!-- Yellow sticker at the top right of the UI -->
+    <div class="yellowSticker">
+        <div class="yellowStickerBorder">
+            <div class="yellowStickerBolt"></div>
+            <h4 class="yellowStickerText">Netzspannung beachten ! <br> Verifier la tension du secteur</h4>
+            <div class="yellowStickerBolt2"></div>
+        </div>
+    </div>
+
+    
+
+    <!-- A counter that increases incrementally with each key press -->
+    <div id="pseudoCounter">0</div>
+
+    <!-- The visbile counter that has 4 separate inputs -->
+    <div class="counterContainer">
+        <h3 class="counter">0</h3>
+        <h3 class="counter" id="counter3">0</h3>
+        <h3 class="counter" id="counter2">0</h3>
+        <h3 class="counter" id="counter">0</h3>
+    </div>
+
+    <!-- The lever to the right of the analogue counter that can be clicked to reset the counter and any text on the notepad -->
+    <div class="counterLever" onmouseover="tooltip2()" onmouseout="hideTooltip2()">
+        <div class="counterLeverHandle" id="lever"></div>
+    </div>
+
+    <!-- Tooltip help when you hover over the counter lever (functionality written in JS)-->
+    <div class="tooltip2" id="tooltip2">
+        <div>Click this lever to reset the counter and clear any text in the notepad.</div>
+    </div>
+
+    <div class="nemaDivision"></div>
+
+    <!-- Dials and bolts that have no function but are there for aesthetics -->
+    <div class="dials">
+        <div class="dialsBackground">
+            <div class="dial1"></div>
+            <div class="dial2"></div>
+        </div>
+    </div>
+
+    <div class="bolt">
+        <div class="boltReflection"></div>
+    </div>
+
+    <div class="bolt1">
+        <div class="boltHead1"></div>
+    </div>
+    <div class="bolt2">
+        <div class="boltHead2"></div>
+    </div>
+
+
+
+
+
+    <!-- Light up letters dashboard -->
+
+    
+    <!-- Light up letters row 1 -->
+    <div class="lightupLetters">
+        <div class="lightContainer" id="QLightContainer">
+            <div class="lightContainer">
+                <h2 class="lightupText" id="QLight">Q</h2>
+            </div>
+        </div>
+        <div class="lightContainer lightRow" id="WLightContainer">
+            <h2 class="lightupText" id="WLight">W</h2>
+        </div>
+        <div class="lightContainer lightRow" id="ELightContainer">
+            <h2 class="lightupText" id="ELight">E</h2>
+        </div>
+        <div class="lightContainer lightRow" id="RLightContainer">
+            <h2 class="lightupText" id="RLight">R</h2>
+        </div>
+        <div class="lightContainer lightRow" id="TLightContainer">
+            <h2 class="lightupText" id="TLight">T</h2>
+        </div>
+        <div class="lightContainer lightRow" id="YLightContainer">
+            <h2 class="lightupText" id="YLight">Y</h2>
+        </div>
+        <div class="lightContainer lightRow" id="ULightContainer">
+            <h2 class="lightupText" id="ULight">U</h2>
+        </div>
+        <div class="lightContainer lightRow" id="ILightContainer">
+            <h2 class="lightupText" id="ILight">I</h2>
+        </div>
+        <div class="lightContainer lightRow" id="OLightContainer">
+            <h2 class="lightupText" id="OLight">O</h2>
+        </div>
+        <div class="lightContainer lightRow" id="PLightContainer">
+            <h2 class="lightupText" id="PLight">P</h2>
+        </div>
+    </div>
+
+    <!-- Light up letters row 2 -->
+    <div class="lightupLetters2">
+        <div class="lightContainer" id="ALightContainer">
+            <h2 class="lightupText" id="ALight">A</h2>
+        </div>
+        <div class="lightContainer lightRow" id="SLightContainer">
+            <h2 class="lightupText" id="SLight">S</h2>
+        </div>
+        <div class="lightContainer lightRow" id="DLightContainer">
+            <h2 class="lightupText" id="DLight">D</h2>
+        </div>
+        <div class="lightContainer lightRow" id="FLightContainer">
+            <h2 class="lightupText" id="FLight">F</h2>
+        </div>
+        <div class="lightContainer lightRow" id="GLightContainer">
+            <h2 class="lightupText" id="GLight">G</h2>
+        </div>
+        <div class="lightContainer lightRow" id="HLightContainer">
+            <h2 class="lightupText" id="HLight">H</h2>
+        </div>
+        <div class="lightContainer lightRow" id="JLightContainer">
+            <h2 class="lightupText" id="JLight">J</h2>
+        </div>
+        <div class="lightContainer lightRow" id="KLightContainer">
+            <h2 class="lightupText" id="KLight">K</h2>
+        </div>
+        <div class="lightContainer lightRow" id="LLightContainer">
+            <h2 class="lightupText" id="LLight">L</h2>
+        </div>
+    </div>
+
+    <!-- Light up letters row 3 -->
+    <div class="lightupLetters3">
+        <div class="lightContainer" id="ZLightContainer">
+            <h2 class="lightupText" id="ZLight">Z</h2>
+        </div>
+        <div class="lightContainer lightRow" id="XLightContainer">
+            <h2 class="lightupText" id="XLight">X</h2>
+        </div>
+        <div class="lightContainer lightRow" id="CLightContainer">
+            <h2 class="lightupText" id="CLight">C</h2>
+        </div>
+        <div class="lightContainer lightRow" id="VLightContainer">
+            <h2 class="lightupText" id="VLight">V</h2>
+        </div>
+        <div class="lightContainer lightRow" id="BLightContainer">
+            <h2 class="lightupText" id="BLight">B</h2>
+        </div>
+        <div class="lightContainer lightRow" id="NLightContainer">
+            <h2 class="lightupText" id="NLight">N</h2>
+        </div>
+        <div class="lightContainer lightRow" id="MLightContainer">
+            <h2 class="lightupText" id="MLight">M</h2>
+        </div>
+        <div class="lightContainer lightRow">
+        </div>
+        <div class="lightContainer lightRow">
+        </div>
+    </div>
+
+    <!-- Type Writer Letters-->
+
+    <div class="keysBackground">
+
+        <!-- Typewriter keys row 1-->
+        <div class="typewriterLetters">
+            <div class="keyContainer" id="qKey">
+                <h2 class="typewriterKeysText keyboardKeyContainer" id="qKeyText">Q</h2>
+            </div>
+            <div class="keyboardRow" id="wKey">
+                <h2 class="typewriterKeysText" id="wKeyText">W</h2>
+            </div>
+            <div class="keyboardRow" id="eKey">
+                <h2 class="typewriterKeysText" id="eKeyText">E</h2>
+            </div>
+            <div class="keyboardRow" id="rKey">
+                <h2 class="typewriterKeysText" id="rKeyText">R</h2>
+            </div>
+            <div class="keyboardRow" id="tKey">
+                <h2 class="typewriterKeysText" id="tKeyText">T</h2>
+            </div>
+            <div class="keyboardRow" id="yKey">
+                <h2 class="typewriterKeysText" id="yKeyText">Y</h2>
+            </div>
+            <div class="keyboardRow" id="uKey">
+                <h2 class="typewriterKeysText" id="uKeyText">U</h2>
+            </div>
+            <div class="keyboardRow" id="iKey">
+                <h2 class="typewriterKeysText" id="iKeyText">I</h2>
+            </div>
+            <div class="keyboardRow" id="oKey">
+                <h2 class="typewriterKeysText" id="oKeyText">O</h2>
+            </div>
+            <div class="keyboardRow" id="pKey">
+                <h2 class="typewriterKeysText" id="pKeyText">P</h2>
+            </div>
+            <div class="keyboardRow" id="wrKey">
+                <h2 class="typewriterKeysText" id="wrKeyText">WR</h2>
+            </div>
+        </div>
+
+        <!-- Typewriter keys row 2-->
+        <div class="typewriterLetters2">
+            <div class="keyContainer" id="aKey">
+                <h2 class="typewriterKeysText" id="aKeyText">A</h2>
+            </div>
+            <div class="keyboardRow" id="sKey">
+                <h2 class="typewriterKeysText" id="sKeyText">S</h2>
+            </div>
+            <div class="keyboardRow" id="dKey">
+                <h2 class="typewriterKeysText" id="dKeyText">D</h2>
+            </div>
+            <div class="keyboardRow" id="fKey">
+                <h2 class="typewriterKeysText" id="fKeyText">F</h2>
+            </div>
+            <div class="keyboardRow" id="gKey">
+                <h2 class="typewriterKeysText" id="gKeyText">G</h2>
+            </div>
+            <div class="keyboardRow" id="hKey">
+                <h2 class="typewriterKeysText" id="hKeyText">H</h2>
+            </div>
+            <div class="keyboardRow" id="jKey">
+                <h2 class="typewriterKeysText" id="jKeyText">J</h2>
+            </div>
+            <div class="keyboardRow" id="kKey">
+                <h2 class="typewriterKeysText" id="kKeyText">K</h2>
+            </div>
+            <div class="keyboardRow" id="lKey">
+                <h2 class="typewriterKeysText" id="lKeyText">L</h2>
+            </div>
+            <div class="keyboardRow" id="zlKey">
+                <h2 class="typewriterKeysText" id="zlKeyText">ZL</h2>
+            </div>
+        </div>
+
+        <!-- Typewriter keys row 3 -->
+        <div class="typewriterLetters3">
+            <div class="keyContainer" id="zKey">
+                <h2 class="typewriterKeysText" id="zKeyText">Z</h2>
+            </div>
+            <div class="keyboardRow" id="xKey">
+                <h2 class="typewriterKeysText" id="xKeyText">X</h2>
+            </div>
+            <div class="keyboardRow" id="cKey">
+                <h2 class="typewriterKeysText" id="cKeyText">C</h2>
+            </div>
+            <div class="keyboardRow" id="vKey">
+                <h2 class="typewriterKeysText" id="vKeyText">V</h2>
+            </div>
+            <div class="keyboardRow" id="bKey">
+                <h2 class="typewriterKeysText" id="bKeyText">B</h2>
+            </div>
+            <div class="keyboardRow" id="nKey">
+                <h2 class="typewriterKeysText" id="nKeyText">N</h2>
+            </div>
+            <div class="keyboardRow" id="mKey">
+                <h2 class="typewriterKeysText" id="mKeyText">M</h2>
+            </div>
+            <div class="keyboardRow blankContainerTypewriter1" id=".Key">
+                <h2 class="typewriterKeysText" id=".KeyText">.</h2>
+            </div>
+            <div class="keyboardRow  blankContainerTypewriter1">
+                <h2 class="typewriterKeysText">.</h2>
+            </div>
+            <div class="keyboardRow">
+                <h2 class="typewriterKeysText">BU</h2>
+            </div>
+
+            <div class="spaceBar" id="spaceKey"></div>
+        </div>
+
+    </div>
+
+
+    <script src="" async defer></script>
+</body>
+
+</html>
